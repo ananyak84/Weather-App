@@ -83,6 +83,12 @@ document.querySelector(".error").style.display="none";
 }
 
         }
+    searchBox.addEventListener("keydown", function(e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                checkWeather(searchBox.value);
+            }
+        });
         searchBtn.addEventListener("click",()=>{
             checkWeather(searchBox.value);
         })
